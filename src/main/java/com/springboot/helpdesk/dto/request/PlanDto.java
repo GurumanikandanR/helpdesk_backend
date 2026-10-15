@@ -1,0 +1,15 @@
+package com.springboot.helpdesk.dto.request;
+
+import com.springboot.helpdesk.enums.PlanType;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record PlanDto(
+
+        @NotNull(message = "PlanType is required")
+        PlanType planType,
+
+        @NotNull(message = "Price is required")
+        double price
+) {
+}
