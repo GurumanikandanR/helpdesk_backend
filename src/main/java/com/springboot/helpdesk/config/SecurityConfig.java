@@ -29,7 +29,7 @@ public class SecurityConfig {
     // I will define a bean of type UserDetailsService
     // You are telling Spring: I don't want to use your details service,
     // I want to define my own Service and my own credentials.
-
+/*
     @Bean
     public UserDetailsService users() {
         UserDetails customer1 = User.builder()
@@ -50,6 +50,7 @@ public class SecurityConfig {
         return new InMemoryUserDetailsManager(customer1, executive1, manager1);
     }
 
+  */
     @Bean
     public SecurityFilterChain defaultFilterChain(HttpSecurity http) throws Exception {
         http
